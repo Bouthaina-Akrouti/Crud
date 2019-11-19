@@ -1,0 +1,10 @@
+use contact
+ db.createCollection('contactlist')
+ db.contactlist.insertMany
+db.contactlist.find().pretty()
+bd.contactlist.find(_id="5dd3c818335c13161d354a73")
+ db.contactlist.find({age: {$gt: 18}})
+ db.contactlist.find({$and : [{age: {$gt: 18}}, {$or: [{Lastname: {$regex: /ah/}}, {Firstname: {$regex: /ah/}}]}]})
+db.contactlist.update({Lastname: 'Kefi'}, {$set:{Firstname:'Anis'}})
+db.contactlist.remove({age: {$lt: 5}})
+db.contactlist.find().pretty()
